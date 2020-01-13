@@ -51,11 +51,25 @@
 
 **Qu'est qu'un ORM ?**
 
+ORM = Object-Relational-(Mapping / Mapper) 
+
+Outils permettant de faire des calls SQL dans d'autres langages. Les ORMs offrent également d'autres fonctionnalités permettant de faire des calls SQLs complexes plus facilement (connection pooling, migrations, seeds, streams, etc). C'est aussi un moyen de "facilement" passer d'une technologie SQL à une autre (MySQL, PostgreSQL, etc). 
+
+Le plus connu en PHP est Doctrine, ActiveRecord en Ruby. La plus part des autres ORMs font partie intégrante de frameworks globaux (Laravel, CakePHP, Django, Ruby on Rails).
+
 **Quelle est la différence entre une base de données SQL et NoSQL ?**
+
+La plus grande différence est que une BDD SQL est relationnelle, elle utilise des tables de relations, là où NoSQL utilise un système de clé-valeur. Cela offre plusieurs avantages / inconvénients : 
+- Les bases de données SQL vont être plus pratiques car elles permettent de faire des requêtes beaucoup plus complexe, et ont une structure hiérarchique.
+- Les bases NoSQL vont offrir moins de possibilités et sont moins rapide quand il s'agit de faire des requêtes complexes. Cependant elles sont beaucoup plus facile à scaler, facilitant la montée en charge. Beaucoup d'applications utilisent ce type de base de données pour des applications en temps réel, ou encore la mise en cache.
 
 **À quoi sert `DROP TABLE` ?**
 
+`DROP TABLE` permet de supprimer une table SQL.
+
 **Quelle est la différence entre `DROP TABLE` et `TRUNCATE TABLE` ?**
+
+`DROP TABLE` supprimer définitivement la table alors que `TRUNCATE TABLE` supprime uniquement son contenu (elle la vide).
 
 ## PHP
 
