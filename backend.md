@@ -31,7 +31,7 @@
 
 - `kill` pour "tuer" des process bien précis via son PID. Plus efficace que `killall` qui peut parfois ignorer certains process.
 - `killall` pour "tuer" un ou plusieurs process en utilisant un nom plutôt qu'un PID
-- Il existe plusieurs types de signal, permettant de faire différents type de `kill` suivant le code signal utilisé. Le signal par défaut permet d'arrêter le process spécifié, mais il existe d'autre signaux permettant par exemple de relancer un process en cours d'exécution (à la manière d'un restart). La commande `kill -l` offre une liste basique de l'ensemble des signaux disponibles.
+- Il existe plusieurs types de signaux, permettant de faire différents type de `kill` suivant le code signal utilisé. Le signal par défaut permet d'arrêter le process spécifié, mais il existe d'autre signaux permettant par exemple de relancer un process en cours d'exécution (à la manière d'un restart). La commande `kill -l` offre une liste basique de l'ensemble des signaux disponibles.
 
 ## HTTP / HTTPS
 
