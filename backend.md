@@ -37,15 +37,52 @@
 
 **Définir les différents codes de réponses HTTP (200, 300, 400, 500)**
 
+- **1xx** Informationnal
+- **2xx** Success
+- **3xx** Redirection
+- **4xx** Client Error
+- **5xx** Server Error
+
 **Citer quelques codes de réponses HTTP et les définir (404, 401, 502, etc**)
 
-**Définir les différents types de requêtes / protocoles HTTP (GET, POST, etc)**
+- **200** OK = La requête a réussi
+- **301** Moved Permanently = Redirection permanente de l'adresse spécifiée pour la requête
+- **404** Not Found = La ressource demandée n'a pas été trouvé sur le serveur
+- **500** Internal Server Error = Le serveur a rencontré une erreur qui l'empêche de répondre correctement et ne concerne pas d'autres erreurs 500 identifiables
 
-**Quelle est la différence entre les protocoles `PUT` et `PATCH` ?**
+**Définir les différentes méthodes HTTP (GET, POST, etc)**
+
+- **POST** La requête envoir un objet contenant nécessaire pour obtenir une réponse
+- **GET** Requête demandant la lecture ou de retrouver une ressource
+- **PUT** Requête de mise à jour complète d'une ressource
+- **PATCH** Requête de mise à jour partielle d'une ressource
+- **DELETE** Requête de suppression d'une ressource
+
+**Quelle est la différence entre les méthodes `PUT` et `PATCH` ?**
+
+Le protocole `PUT` met à jour l'ensemble de la ressource concernée, et doit donc contenir la structure et les donées exactes de cette même ressource.
+Le protocole `PATCH` permet de mettre à jour seulement une partie d'une ressource, sans avoir à réécrire / re-spécifier l'ensemble de sa structure et de ses données.
 
 **Quels sont les ports dédiés à HTTP et HTTPS ?**
 
-**Quelles est la différence entre HTTP et HTTPS ?**
+- **HTTP** Port `80`
+- **HTTPS** Port `443`
+
+**Quelles sont les différences entre HTTP et HTTPS ?**
+
+`HTTP` signifie `HyperText Transfert Protocol` et le `S` signifie `Secure`.
+
+Le protocole `HTTPS` est une version plus avancée et sécurisée de `HTTP`. Il permet de sécuriser les échanges de données entre le serveur et le navigateur.
+
+Le cryptage des communications en `HTTPS` est basé sur un protocole SSL/TLS.
+
+`HTTPS` est souvent considéré comme plus rapide, mais ce n'est pas totalement vrai. Ce qui permet à `HTTPS` d'être plus performant est basé sur 2 points :
+- Les serveurs supportant `HTTPS` surpportent généralement `HTTP2.0` qui offre un gain de performance par rapport à `HTTP1.0`
+- Si `HTTPS` est activé, la plus part des navigateurs pourront proposer des `Services Workers` qui offrent différentes possibilités telles que nottamment le support offline ou le chargement plus rapide des assets des sites et adresses visités.
+
+**Qu'est-ce qu'un Service Worker ?**
+
+Un [Service Worker](https://developers.google.com/web/fundamentals/primers/service-workers/) est un script exécuté par le navigateur en tâche de fond, de manière séparée du reste de la page Web. Les Service Worker comprennent de nombreuses fonctionnalités telles que les Push Notifications ou la géolocalisation.
 
 ## SQL / NoSQL / Database
 
