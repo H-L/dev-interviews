@@ -52,7 +52,7 @@
 
 **Définir les différentes méthodes HTTP (GET, POST, etc)**
 
-- **POST** La requête envoir un objet contenant nécessaire pour obtenir une réponse
+- **POST** La requête envoi un objet nécessaire pour obtenir une réponse
 - **GET** Requête demandant la lecture ou de retrouver une ressource
 - **PUT** Requête de mise à jour complète d'une ressource
 - **PATCH** Requête de mise à jour partielle d'une ressource
@@ -77,8 +77,8 @@ Le protocole `HTTPS` est une version plus avancée et sécurisée de `HTTP`. Il 
 Le cryptage des communications en `HTTPS` est basé sur un protocole SSL/TLS.
 
 `HTTPS` est souvent considéré comme plus rapide, mais ce n'est pas totalement vrai. Ce qui permet à `HTTPS` d'être plus performant est basé sur 2 points :
-- Les serveurs supportant `HTTPS` surpportent généralement `HTTP2.0` qui offre un gain de performance par rapport à `HTTP1.0`
-- Si `HTTPS` est activé, la plus part des navigateurs pourront proposer des `Services Workers` qui offrent différentes possibilités telles que nottamment le support offline ou le chargement plus rapide des assets des sites et adresses visités.
+- Les serveurs supportant `HTTPS` supportent généralement `HTTP2.0` qui offre un gain de performance par rapport à `HTTP1.0`
+- Si `HTTPS` est activé, la plus part des navigateurs pourront proposer des `Services Workers` qui accélèrent le chargement des sites pour les utilisateurs fréquents (support offline, chargement plus rapide des assets des sites et adresses visités, etc).
 
 **Qu'est-ce qu'un Service Worker ?**
 
