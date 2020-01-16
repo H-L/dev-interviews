@@ -126,14 +126,95 @@ Une `FOREIGN KEY` est une référence à une `PRIMARY KEY` d'une autre table. El
 
 **Quelle est la différence entre une `Interface` et une `Classe Abstraite` ?**
 
+- Une `Interface` supporte plusieurs héritage successifs
+```php
+# 1 - Interfaces
+interface Interface_A { }
+interface Interface_B { }
+interface Interface_C { }
+
+# Multiple Interfaces on the same Object / Class
+interface MyInterface extends Interface_A, Interface_B, Interface_C { }
+
+# ======== 
+# 2 - Abstract Classes
+class Class_A { }
+class Class_B { }
+
+# This still works.
+abstract class MyAbstractClass extends Class_A { }
+
+# This will throw an error
+abstract class MyAbstractClass extends Class_A, Class_B { }
+```
+
+- Une `Interface` ne peut pas contenir de `Data Member` (class properties or variables)
+```php
+# NOPE
+interface MyInterface {
+  public $foo = null;
+}
+
+# This is fine
+abstract class MyAbstractClass {
+    public $foo = null;
+}
+```
+
+- Une `Interface` ne doit pas contenir de méthode `__constructor()`. En PHP, les `Interfaces` peuvent en contenir, mais cela n'a pas beaucoup de sens. Les `Classes Abstraites` quand à elles peuvent contenir une méthode `__constructor`.
+- Les `Classes Abstraites` contiennent des méthodes à définir (comme les `Interfaces`) et des méthodes déjà définies (héritage de classe)
+- Les `Interfaces` ne peuvent pas contenir de méthodes statiques, les `Classes Abstraites` oui, si la méthode définie n'est pas abstraite
+
+**Qu'est-ce qu'une méthode statique ?**
+
+Un élément statique est un élément pouvant être appelée sans instance d'objet.
+Il ne peut cependant pas être appelé via `->`, seulement via `Objet::element_statique`.
+
+```php
+class Foo
+{
+    public static $my_static = 'foo';
+
+    public function staticValue() {
+        return self::$my_static;
+    }
+}
+
+// Appelé sans instance
+print Foo::$my_static . "\n"; // foo
+
+$foo = new Foo();
+print $foo->staticValue() . "\n"; // foo
+print $foo::$my_static . "\n";    // foo
+print $foo->my_static . "\n";     // "Propriété" my_static non définie
+```
+
 **Quelle est la différence entre `private` `protected` et `public` ?**
 
+- `private` -> Élément accessible **uniquement dans l'objet le contenant**
+- `protected` -> Élément accessible **dans l'objet le contenant ET ses descendants**
+- `public` -> Élément accessible **partout**
+  
 **Qu'est-ce que `Xdebug` et à quoi sert-il ?**
+
+`Xdebug` est une extension PHP proposant des outils de débugage et de profilage.
+Fonctionnalités de Xdebug :
+- Intégration du debugger sur différents IDEs
+- Amélioration de `var_dump()`
+- Ajout de `stack traces` for les différents messages générés par PHP (Notice, Warning, Error, Exception)
+- Possibilité d'enregistrement de l'ensemble des appels de fonctions et variables directement sur le disque
+- Un `profiler` pour détecter des pertes de performances dans le code PHP
+- Offre des fonctionnalités de `code coverage` si utilisé avec `PHPUnit`
 
 **Avec quels outils peut-on faire des tests en PHP ?**
 
+- `PHPUnit` pour les tests unitaires (TDD = Test Driven Development)
+- `Behat` + `Mink` + `Selenium` pour faire des tests en BDD (Behavior Driven Development)
+
 **En quoi `Xdebug` est utile pour faire des tests avec `PHPUnit` ?**
+
+Il permet de mesurer le `code coverage` des tests, autrement dit le nombre de total de lignes de code testée par PHPUnit lors des tests.
 
 **Qu'est-ce que `composer` ?**
 
-**Que peut-on faire avec `composer` ?**
+`composer` est un outil de gestion de dépendances pour PHP. Il permet de déclarer les librairies utilisées pour un projet et des les installer / mettre à jour.
