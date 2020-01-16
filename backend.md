@@ -71,6 +71,20 @@ La plus grande différence est que une BDD SQL est relationnelle, elle utilise d
 
 `DROP TABLE` supprimer définitivement la table alors que `TRUNCATE TABLE` supprime uniquement son contenu (elle la vide).
 
+**Qu'est-ce qu'un `index` en SQL ?**
+
+Un index est une structure entretenue automatiquement, qui permet de localiser facilement des enregistrements dans un fichier.
+
+De la même manière qu'un sommaire ou qu'un annuaire, l'index facilite et accélère la recherche d'informations dans la base en classant les références à une donnée de manière particulière.
+
+**Qu'est-ce qu'une `PRIMARY KEY` ?**
+
+Une `PRIMARY KEY` ou `ID` est une valeur unique associée à chaque entrée dans une table et qui permet de faire référence à cette entrée pour la lire, la modifier, le supprimer, etc.
+
+**Qu'est-ce qu'une `FOREIGN KEY` ?**
+
+Une `FOREIGN KEY` est une référence à une `PRIMARY KEY` d'une autre table. Elle permet de mettre en relation des entrées entre différentes tables.
+
 ## PHP
 
 **Quelle est la différence entre une Interface et une Classe Abstraite ?**
