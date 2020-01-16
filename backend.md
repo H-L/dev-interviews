@@ -124,16 +124,16 @@ Une `FOREIGN KEY` est une référence à une `PRIMARY KEY` d'une autre table. El
 
 ## PHP
 
-**Quelle est la différence entre une Interface et une Classe Abstraite ?**
+**Quelle est la différence entre une `Interface` et une `Classe Abstraite` ?**
 
 **Quelle est la différence entre `private` `protected` et `public` ?**
 
-**Qu'est-ce que Xdebug et à quoi sert-il ?**
+**Qu'est-ce que `Xdebug` et à quoi sert-il ?**
 
 **Avec quels outils peut-on faire des tests en PHP ?**
 
-**En quoi Xdebug est utile pour faire des tests avec PHPUnit ?**
+**En quoi `Xdebug` est utile pour faire des tests avec `PHPUnit` ?**
 
 **Qu'est-ce que `composer` ?**
 
-**Que peut-on faire avec composer ?**
+**Que peut-on faire avec `composer` ?**
